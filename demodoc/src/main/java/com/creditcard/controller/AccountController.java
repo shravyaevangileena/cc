@@ -32,10 +32,10 @@ public class AccountController {
 		
 		
 		@PostMapping(value="/addaccount",consumes = "application/json")
-		public String addAccount(@RequestBody Account account ) {
+		public Account addAccount(@RequestBody Account account ) {
 			
-			accountserviceimp.addAccount(account);
-			return "added successfully";
+			return accountserviceimp.addAccount(account);
+			
 		}
 		
 		@DeleteMapping("/account/delete/{id}")
